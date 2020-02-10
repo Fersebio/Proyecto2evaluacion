@@ -6,4 +6,6 @@
     End Structure
     Public mt As Montaditos
     Public total_dia As Double
+    Public Nombre As String
+
 End Module

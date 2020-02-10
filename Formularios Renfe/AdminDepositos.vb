@@ -65,7 +65,7 @@ Public Class AdminDepos
         conexion.Close()
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles BRTodos.Click
         PBDieselPlus.Value = PBDieselPlus.Maximum
         PBDiesel.Value = PBDiesel.Maximum
         PBSinPlomo98.Value = PBSinPlomo98.Maximum
@@ -85,5 +85,15 @@ Public Class AdminDepos
             MsgBox("No se puede modificar")
         End If
 
+    End Sub
+
+    Private Sub VolverToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VolverToolStripMenuItem.Click
+        Me.Close()
+        Inicio.Show()
+        BRSinPlomo95.Visible = False
+        BRSinPlomo98.Visible = False
+        BRDiesel.Visible = False
+        BRDieselPlus.Visible = False
+        BRTodos.Visible = False
     End Sub
 End Class

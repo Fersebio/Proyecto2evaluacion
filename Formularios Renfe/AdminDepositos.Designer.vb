@@ -35,15 +35,19 @@ Partial Class AdminDepos
         Me.PBSinPlomo95 = New System.Windows.Forms.ProgressBar()
         Me.PBDiesel = New System.Windows.Forms.ProgressBar()
         Me.PBSinPlomo98 = New System.Windows.Forms.ProgressBar()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.BRTodos = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VolverToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox2
@@ -64,6 +68,7 @@ Partial Class AdminDepos
         Me.BRSinPlomo95.TabIndex = 4
         Me.BRSinPlomo95.Text = "Rellenar"
         Me.BRSinPlomo95.UseVisualStyleBackColor = True
+        Me.BRSinPlomo95.Visible = False
         '
         'BRSinPlomo98
         '
@@ -73,6 +78,7 @@ Partial Class AdminDepos
         Me.BRSinPlomo98.TabIndex = 5
         Me.BRSinPlomo98.Text = "Rellenar"
         Me.BRSinPlomo98.UseVisualStyleBackColor = True
+        Me.BRSinPlomo98.Visible = False
         '
         'BRDiesel
         '
@@ -82,6 +88,7 @@ Partial Class AdminDepos
         Me.BRDiesel.TabIndex = 6
         Me.BRDiesel.Text = "Rellenar"
         Me.BRDiesel.UseVisualStyleBackColor = True
+        Me.BRDiesel.Visible = False
         '
         'BRDieselPlus
         '
@@ -91,6 +98,7 @@ Partial Class AdminDepos
         Me.BRDieselPlus.TabIndex = 7
         Me.BRDieselPlus.Text = "Rellenar"
         Me.BRDieselPlus.UseVisualStyleBackColor = True
+        Me.BRDieselPlus.Visible = False
         '
         'PictureBox1
         '
@@ -158,14 +166,15 @@ Partial Class AdminDepos
         Me.PBSinPlomo98.TabIndex = 14
         Me.PBSinPlomo98.Value = 5000
         '
-        'Button5
+        'BRTodos
         '
-        Me.Button5.Location = New System.Drawing.Point(334, 193)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 59)
-        Me.Button5.TabIndex = 15
-        Me.Button5.Text = "Rellenar Todos"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.BRTodos.Location = New System.Drawing.Point(334, 193)
+        Me.BRTodos.Name = "BRTodos"
+        Me.BRTodos.Size = New System.Drawing.Size(75, 59)
+        Me.BRTodos.TabIndex = 15
+        Me.BRTodos.Text = "Rellenar Todos"
+        Me.BRTodos.UseVisualStyleBackColor = True
+        Me.BRTodos.Visible = False
         '
         'Label1
         '
@@ -203,6 +212,28 @@ Partial Class AdminDepos
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Diesel +"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VolverToolStripMenuItem})
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(41, 20)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'VolverToolStripMenuItem
+        '
+        Me.VolverToolStripMenuItem.Name = "VolverToolStripMenuItem"
+        Me.VolverToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VolverToolStripMenuItem.Text = "Volver"
+        '
         'AdminDepos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -212,7 +243,7 @@ Partial Class AdminDepos
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.BRTodos)
         Me.Controls.Add(Me.PBSinPlomo98)
         Me.Controls.Add(Me.PBDiesel)
         Me.Controls.Add(Me.PBSinPlomo95)
@@ -225,13 +256,17 @@ Partial Class AdminDepos
         Me.Controls.Add(Me.BRSinPlomo98)
         Me.Controls.Add(Me.BRSinPlomo95)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AdminDepos"
         Me.Text = "Admin Depositos"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -249,9 +284,12 @@ Partial Class AdminDepos
     Friend WithEvents PBSinPlomo95 As ProgressBar
     Friend WithEvents PBDiesel As ProgressBar
     Friend WithEvents PBSinPlomo98 As ProgressBar
-    Friend WithEvents Button5 As Button
+    Friend WithEvents BRTodos As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VolverToolStripMenuItem As ToolStripMenuItem
 End Class

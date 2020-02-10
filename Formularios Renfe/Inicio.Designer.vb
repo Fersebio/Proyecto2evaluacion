@@ -59,25 +59,25 @@ Partial Class Inicio
         'DepositosToolStripMenuItem
         '
         Me.DepositosToolStripMenuItem.Name = "DepositosToolStripMenuItem"
-        Me.DepositosToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.DepositosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DepositosToolStripMenuItem.Text = "Depositos"
         '
         'StockToolStripMenuItem
         '
         Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
-        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.StockToolStripMenuItem.Text = "Stock"
         '
         'CajaToolStripMenuItem
         '
         Me.CajaToolStripMenuItem.Name = "CajaToolStripMenuItem"
-        Me.CajaToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.CajaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CajaToolStripMenuItem.Text = "Caja"
         '
         'SimulacionToolStripMenuItem
         '
         Me.SimulacionToolStripMenuItem.Name = "SimulacionToolStripMenuItem"
-        Me.SimulacionToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.SimulacionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SimulacionToolStripMenuItem.Text = "Simulacion"
         '
         'AdminToolStripMenuItem
@@ -86,23 +86,24 @@ Partial Class Inicio
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
         Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.AdminToolStripMenuItem.Text = "Admin"
+        Me.AdminToolStripMenuItem.Visible = False
         '
         'AdminUsuariosToolStripMenuItem
         '
         Me.AdminUsuariosToolStripMenuItem.Name = "AdminUsuariosToolStripMenuItem"
-        Me.AdminUsuariosToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.AdminUsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdminUsuariosToolStripMenuItem.Text = "Admin Usuarios"
         '
         'AdminProductosToolStripMenuItem
         '
         Me.AdminProductosToolStripMenuItem.Name = "AdminProductosToolStripMenuItem"
-        Me.AdminProductosToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.AdminProductosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdminProductosToolStripMenuItem.Text = "Admin Productos"
         '
         'AdminDepositosToolStripMenuItem
         '
         Me.AdminDepositosToolStripMenuItem.Name = "AdminDepositosToolStripMenuItem"
-        Me.AdminDepositosToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.AdminDepositosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdminDepositosToolStripMenuItem.Text = "Admin Depositos"
         '
         'SesionToolStripMenuItem
@@ -115,13 +116,13 @@ Partial Class Inicio
         'CerrarSesionToolStripMenuItem
         '
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'Label1
