@@ -1,17 +1,17 @@
 ﻿Public Class Inicio
     Private Sub AdminUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminUsuariosToolStripMenuItem.Click
         AdministrarUsuarios.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub StockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StockToolStripMenuItem.Click
         StockP.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub DepositosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepositosToolStripMenuItem.Click
         AdminDepos.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 
     Private Sub AdminDepositosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminDepositosToolStripMenuItem.Click
@@ -21,13 +21,13 @@
         AdminDepos.BRDieselPlus.Visible = True
         AdminDepos.BRTodos.Visible = True
         AdminDepos.Show()
-        Me.Close()
+        Me.Hide()
 
     End Sub
 
     Private Sub AdminProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminProductosToolStripMenuItem.Click
         AdminProductos.Show()
-        Me.Close()
+        Me.Hide()
 
     End Sub
 
@@ -56,6 +56,6 @@
 
     Private Sub SimulacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SimulacionToolStripMenuItem.Click
         Simulacion.Show()
-        Me.Close()
+        Me.Hide()
     End Sub
 End Class

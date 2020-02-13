@@ -12,7 +12,8 @@ Public Class AdminDepos
 
         conexion.Open()
         If comando.ExecuteNonQuery() Then
-            MsgBox("Actualizacion correcta")
+            MsgBox("Tanque de Sin plomo 95 Rellenado con exito")
+            Label5.Text = "10000/10000"
 
         Else
             MsgBox("No se puede modificar")
@@ -27,7 +28,8 @@ Public Class AdminDepos
 
         conexion.Open()
         If comando.ExecuteNonQuery() Then
-            MsgBox("Actualizacion correcta")
+            MsgBox("Tanque de Sin plomo 98 Rellenado con exito")
+            Label8.Text = "10000/10000"
 
         Else
             MsgBox("No se puede modificar")
@@ -42,7 +44,8 @@ Public Class AdminDepos
 
         conexion.Open()
         If comando.ExecuteNonQuery() Then
-            MsgBox("Actualizacion correcta")
+            MsgBox("Tanque de Diesel Rellenado con exito")
+            Label7.Text = "10000/10000"
 
         Else
             MsgBox("No se puede modificar")
@@ -57,11 +60,15 @@ Public Class AdminDepos
 
         conexion.Open()
         If comando.ExecuteNonQuery() Then
-            MsgBox("Actualizacion correcta")
-
+            MsgBox("Tanque de Diesel+ Rellenado con exito")
+            Label6.Text = "10000/10000"
         Else
-            MsgBox("No se puede modificar")
+            MsgBox("Error con la conexion a la base de datos")
         End If
+
+
+
+
         conexion.Close()
     End Sub
 
@@ -78,11 +85,15 @@ Public Class AdminDepos
         Dim comando2 As New OleDbCommand(ordensql2, conexion)
         Dim comando3 As New OleDbCommand(ordensql3, conexion)
         Dim comando4 As New OleDbCommand(ordensql4, conexion)
+        Label8.Text = "10000/10000"
+        Label7.Text = "10000/10000"
+        Label5.Text = "10000/10000"
+        Label6.Text = "10000/10000"
         conexion.Open()
         If comando1.ExecuteNonQuery() And comando2.ExecuteNonQuery() And comando3.ExecuteNonQuery() And comando4.ExecuteNonQuery() Then
-            MsgBox("Actualizacion correcta")
+            MsgBox("Todos los tanques rellenados")
         Else
-            MsgBox("No se puede modificar")
+            MsgBox("Error con la conexion a la base de datos")
         End If
 
     End Sub
@@ -96,4 +107,29 @@ Public Class AdminDepos
         BRDieselPlus.Visible = False
         BRTodos.Visible = False
     End Sub
+
+    Private Sub AdminDepos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim ordensql As String = "Select * from Depositos"
+        Dim comando As New OleDbCommand(ordensql, conexion)
+        conexion.Open()
+        Dim res As OleDbDataReader = comando.ExecuteReader
+        While res.Read
+            If res("TipoG") = "SP98" Then
+                PBSinPlomo98.Value = res("Cantidad")
+                Label8.Text = res("Cantidad").ToString + "/10000"
+            ElseIf res("TipoG") = "SP95" Then
+                PBSinPlomo95.Value = res("Cantidad")
+                Label5.Text = res("Cantidad").ToString + "/10000"
+            ElseIf res("TipoG") = "Diesel" Then
+                PBDiesel.Value = res("Cantidad")
+                Label7.Text = res("Cantidad").ToString + "/10000"
+            ElseIf res("TipoG") = "DieselPlus" Then
+                PBDieselPlus.Value = res("Cantidad")
+                Label6.Text = res("Cantidad").ToString + "/10000"
+            End If
+        End While
+        conexion.Close()
+    End Sub
+
+
 End Class
