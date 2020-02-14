@@ -23,8 +23,6 @@ Partial Class AdministrarUsuarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdministrarUsuarios))
-        Me.TBBuscar = New System.Windows.Forms.TextBox()
-        Me.BBuscar = New System.Windows.Forms.Button()
         Me.LEjemploCorreo = New System.Windows.Forms.Label()
         Me.LEjemploContraseña = New System.Windows.Forms.Label()
         Me.TBUsuario = New System.Windows.Forms.TextBox()
@@ -48,7 +46,6 @@ Partial Class AdministrarUsuarios
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoUsuarioTSMI = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActualizarTSMI = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.GuardarTSMI = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarTSMI = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,26 +55,12 @@ Partial Class AdministrarUsuarios
         Me.Label1 = New System.Windows.Forms.Label()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BusquedaAvanzadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TBBuscar
-        '
-        Me.TBBuscar.Location = New System.Drawing.Point(589, 279)
-        Me.TBBuscar.MaxLength = 2
-        Me.TBBuscar.Name = "TBBuscar"
-        Me.TBBuscar.Size = New System.Drawing.Size(52, 20)
-        Me.TBBuscar.TabIndex = 42
-        '
-        'BBuscar
-        '
-        Me.BBuscar.Location = New System.Drawing.Point(495, 279)
-        Me.BBuscar.Name = "BBuscar"
-        Me.BBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.BBuscar.TabIndex = 43
-        Me.BBuscar.Text = "Buscar"
-        Me.BBuscar.UseVisualStyleBackColor = True
         '
         'LEjemploCorreo
         '
@@ -137,7 +120,7 @@ Partial Class AdministrarUsuarios
         '
         Me.CBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBRol.FormattingEnabled = True
-        Me.CBRol.Items.AddRange(New Object() {"Admin", "Vendedor"})
+        Me.CBRol.Items.AddRange(New Object() {"Encargado", "Propietario ", "Vendedor"})
         Me.CBRol.Location = New System.Drawing.Point(333, 254)
         Me.CBRol.Name = "CBRol"
         Me.CBRol.Size = New System.Drawing.Size(121, 21)
@@ -261,13 +244,13 @@ Partial Class AdministrarUsuarios
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpcionesToolStripMenuItem, Me.VolverToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(762, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(685, 24)
         Me.MenuStrip1.TabIndex = 27
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'OpcionesToolStripMenuItem
         '
-        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioTSMI, Me.ActualizarTSMI, Me.ToolStripSeparator1, Me.GuardarTSMI, Me.ModificarTSMI, Me.ToolStripSeparator2, Me.BorrarTSMI})
+        Me.OpcionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioTSMI, Me.ToolStripSeparator1, Me.GuardarTSMI, Me.ModificarTSMI, Me.ToolStripSeparator2, Me.BorrarTSMI, Me.ToolStripSeparator3, Me.BuscarToolStripMenuItem, Me.BusquedaAvanzadaToolStripMenuItem})
         Me.OpcionesToolStripMenuItem.Name = "OpcionesToolStripMenuItem"
         Me.OpcionesToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
         Me.OpcionesToolStripMenuItem.Text = "Opciones"
@@ -276,45 +259,38 @@ Partial Class AdministrarUsuarios
         '
         Me.NuevoUsuarioTSMI.Name = "NuevoUsuarioTSMI"
         Me.NuevoUsuarioTSMI.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
-        Me.NuevoUsuarioTSMI.Size = New System.Drawing.Size(195, 22)
+        Me.NuevoUsuarioTSMI.Size = New System.Drawing.Size(193, 22)
         Me.NuevoUsuarioTSMI.Text = "Nuevo usuario"
-        '
-        'ActualizarTSMI
-        '
-        Me.ActualizarTSMI.Name = "ActualizarTSMI"
-        Me.ActualizarTSMI.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.ActualizarTSMI.Size = New System.Drawing.Size(195, 22)
-        Me.ActualizarTSMI.Text = "Actualizar Lista"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(192, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(190, 6)
         '
         'GuardarTSMI
         '
         Me.GuardarTSMI.Name = "GuardarTSMI"
         Me.GuardarTSMI.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.G), System.Windows.Forms.Keys)
-        Me.GuardarTSMI.Size = New System.Drawing.Size(195, 22)
+        Me.GuardarTSMI.Size = New System.Drawing.Size(193, 22)
         Me.GuardarTSMI.Text = "Guardar"
         '
         'ModificarTSMI
         '
         Me.ModificarTSMI.Name = "ModificarTSMI"
         Me.ModificarTSMI.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
-        Me.ModificarTSMI.Size = New System.Drawing.Size(195, 22)
+        Me.ModificarTSMI.Size = New System.Drawing.Size(193, 22)
         Me.ModificarTSMI.Text = "Modificar"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(192, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(190, 6)
         '
         'BorrarTSMI
         '
         Me.BorrarTSMI.Name = "BorrarTSMI"
         Me.BorrarTSMI.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.BorrarTSMI.Size = New System.Drawing.Size(195, 22)
+        Me.BorrarTSMI.Size = New System.Drawing.Size(193, 22)
         Me.BorrarTSMI.Text = "Borrar"
         '
         'VolverToolStripMenuItem
@@ -328,7 +304,7 @@ Partial Class AdministrarUsuarios
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(215, 24)
+        Me.Label1.Location = New System.Drawing.Point(148, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(344, 31)
         Me.Label1.TabIndex = 55
@@ -340,22 +316,38 @@ Partial Class AdministrarUsuarios
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(480, 69)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 320)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(255, 171)
+        Me.DataGridView1.Size = New System.Drawing.Size(686, 206)
         Me.DataGridView1.TabIndex = 56
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(190, 6)
+        '
+        'BuscarToolStripMenuItem
+        '
+        Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.BuscarToolStripMenuItem.Text = "Buscar"
+        '
+        'BusquedaAvanzadaToolStripMenuItem
+        '
+        Me.BusquedaAvanzadaToolStripMenuItem.Name = "BusquedaAvanzadaToolStripMenuItem"
+        Me.BusquedaAvanzadaToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.BusquedaAvanzadaToolStripMenuItem.Text = "Busqueda Avanzada"
         '
         'AdministrarUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(762, 334)
+        Me.ClientSize = New System.Drawing.Size(685, 538)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TBBuscar)
-        Me.Controls.Add(Me.BBuscar)
         Me.Controls.Add(Me.LEjemploCorreo)
         Me.Controls.Add(Me.LEjemploContraseña)
         Me.Controls.Add(Me.TBUsuario)
@@ -388,9 +380,6 @@ Partial Class AdministrarUsuarios
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TBBuscar As TextBox
-    Friend WithEvents BBuscar As Button
     Friend WithEvents LEjemploCorreo As Label
     Friend WithEvents LEjemploContraseña As Label
     Friend WithEvents TBUsuario As TextBox
@@ -414,7 +403,6 @@ Partial Class AdministrarUsuarios
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents OpcionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoUsuarioTSMI As ToolStripMenuItem
-    Friend WithEvents ActualizarTSMI As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents GuardarTSMI As ToolStripMenuItem
     Friend WithEvents ModificarTSMI As ToolStripMenuItem
@@ -424,4 +412,7 @@ Partial Class AdministrarUsuarios
     Friend WithEvents Label1 As Label
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents BuscarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BusquedaAvanzadaToolStripMenuItem As ToolStripMenuItem
 End Class

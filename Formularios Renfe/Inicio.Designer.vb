@@ -86,6 +86,7 @@ Partial Class Inicio
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
         Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.AdminToolStripMenuItem.Text = "Admin"
+        Me.AdminToolStripMenuItem.Visible = False
         '
         'AdminUsuariosToolStripMenuItem
         '
@@ -144,7 +145,7 @@ Partial Class Inicio
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Inicio"
-        Me.Text = "Form1"
+        Me.Text = "Inicio"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
