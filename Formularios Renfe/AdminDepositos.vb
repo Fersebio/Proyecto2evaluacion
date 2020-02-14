@@ -5,6 +5,7 @@ Public Class AdminDepos
     Public conexion As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Repsol_db.accdb")
     Public adaptador As New OleDbDataAdapter("Select * from Depositos", conexion)
     Public midataset As New DataSet
+
     Private Sub BRSinPlomo95_Click(sender As Object, e As EventArgs) Handles BRSinPlomo95.Click
         PBSinPlomo95.Value = PBSinPlomo95.Maximum
         Dim ordensql As String = "Update Depositos set Cantidad = " + PBSinPlomo95.Maximum.ToString + " where TipoG = 'SP95'"
@@ -84,6 +85,10 @@ Public Class AdminDepos
         Else
             MsgBox("No se puede modificar")
         End If
+
+    End Sub
+
+    Private Sub AdminDepos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

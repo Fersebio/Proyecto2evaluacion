@@ -134,6 +134,12 @@
     <Compile Include="Simulacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TPV.Designer.vb">
+      <DependentUpon>TPV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TPV.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdministrarUsuarios.resx">
@@ -163,6 +169,9 @@
     <EmbeddedResource Include="Simulacion.resx">
       <DependentUpon>Simulacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TPV.resx">
+      <DependentUpon>TPV.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -175,6 +184,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Repsol_DB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

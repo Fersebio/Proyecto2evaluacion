@@ -100,7 +100,7 @@ Partial Class AdministrarUsuarios
         'TBUsuario
         '
         Me.TBUsuario.Location = New System.Drawing.Point(333, 80)
-        Me.TBUsuario.MaxLength = 12
+        Me.TBUsuario.MaxLength = 30
         Me.TBUsuario.Name = "TBUsuario"
         Me.TBUsuario.Size = New System.Drawing.Size(100, 20)
         Me.TBUsuario.TabIndex = 28
@@ -118,7 +118,7 @@ Partial Class AdministrarUsuarios
         '
         Me.TBId.Enabled = False
         Me.TBId.Location = New System.Drawing.Point(100, 83)
-        Me.TBId.MaxLength = 2
+        Me.TBId.MaxLength = 3
         Me.TBId.Name = "TBId"
         Me.TBId.ReadOnly = True
         Me.TBId.Size = New System.Drawing.Size(100, 20)
@@ -156,7 +156,7 @@ Partial Class AdministrarUsuarios
         'TBCorreo
         '
         Me.TBCorreo.Location = New System.Drawing.Point(100, 242)
-        Me.TBCorreo.MaxLength = 25
+        Me.TBCorreo.MaxLength = 50
         Me.TBCorreo.Name = "TBCorreo"
         Me.TBCorreo.Size = New System.Drawing.Size(153, 20)
         Me.TBCorreo.TabIndex = 40
@@ -189,7 +189,7 @@ Partial Class AdministrarUsuarios
         'TBApellido
         '
         Me.TBApellido.Location = New System.Drawing.Point(333, 114)
-        Me.TBApellido.MaxLength = 12
+        Me.TBApellido.MaxLength = 30
         Me.TBApellido.Name = "TBApellido"
         Me.TBApellido.Size = New System.Drawing.Size(100, 20)
         Me.TBApellido.TabIndex = 33
@@ -197,7 +197,7 @@ Partial Class AdministrarUsuarios
         'TBNombre
         '
         Me.TBNombre.Location = New System.Drawing.Point(100, 121)
-        Me.TBNombre.MaxLength = 10
+        Me.TBNombre.MaxLength = 30
         Me.TBNombre.Name = "TBNombre"
         Me.TBNombre.Size = New System.Drawing.Size(100, 20)
         Me.TBNombre.TabIndex = 31
@@ -332,7 +332,7 @@ Partial Class AdministrarUsuarios
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(344, 31)
         Me.Label1.TabIndex = 55
-        Me.Label1.Text = "Administracion de Usuarios"
+        Me.Label1.Text = "Administración de Usuarios"
         '
         'HelpProvider1
         '
@@ -380,7 +380,7 @@ Partial Class AdministrarUsuarios
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AdministrarUsuarios"
         Me.HelpProvider1.SetShowHelp(Me, True)
-        Me.Text = "Administracion de usuarios"
+        Me.Text = " "
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -182,7 +182,7 @@ Partial Class AdminProductos
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(84, 140)
-        Me.TextBox3.MaxLength = 4
+        Me.TextBox3.MaxLength = 6
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 19
@@ -190,7 +190,7 @@ Partial Class AdminProductos
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(84, 114)
-        Me.TextBox2.MaxLength = 100
+        Me.TextBox2.MaxLength = 30
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 17
@@ -207,15 +207,15 @@ Partial Class AdminProductos
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 225)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 225)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(482, 223)
+        Me.DataGridView1.Size = New System.Drawing.Size(466, 213)
         Me.DataGridView1.TabIndex = 30
         '
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(204, 155)
-        Me.TextBox4.MaxLength = 100
+        Me.TextBox4.MaxLength = 50
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(189, 20)
         Me.TextBox4.TabIndex = 31
