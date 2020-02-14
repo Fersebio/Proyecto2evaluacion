@@ -11,7 +11,7 @@ Public Class InicioSesion
             Dim res As OleDbDataReader = comando.ExecuteReader
             While res.Read
                 If res("Usuario") = TextBox1.Text And res("Contraseña") = TextBox2.Text Then
-                    If res.Item("Rol") = "Admin" Then
+                    If res.Item("Rol") = "Encargado" Or res.Item("Rol") = "Propietario " Then
                         Producto.Nombre = res("Usuario")
                         Inicio.AdminToolStripMenuItem.Visible = True
                         Inicio.Show()
@@ -33,6 +33,10 @@ Public Class InicioSesion
         TextBox1.Clear()
         TextBox2.Clear()
         End Try
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

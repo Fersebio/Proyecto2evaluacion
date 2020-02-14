@@ -58,6 +58,7 @@ Partial Class InicioSesion
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(169, 20)
         Me.TextBox2.TabIndex = 2
+        Me.TextBox2.UseSystemPasswordChar = True
         '
         'Button1
         '
@@ -103,7 +104,7 @@ Partial Class InicioSesion
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "InicioSesion"
-        Me.Text = "Form1"
+        Me.Text = "Inicio Sesion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
