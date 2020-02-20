@@ -12,12 +12,12 @@ Public Class InicioSesion
             While res.Read
                 If res("Usuario") = TextBox1.Text And res("Contraseña") = TextBox2.Text Then
                     If res.Item("Rol") = "Encargado" Or res.Item("Rol") = "Propietario " Then
-                        Producto.Nombre = res("Usuario")
+                        Prod.Nombre = res("Usuario")
                         Inicio.AdminToolStripMenuItem.Visible = True
                         Inicio.Show()
                         Me.Hide()
                     Else
-                        Producto.Nombre = res("Usuario")
+                        Prod.Nombre = res("Usuario")
                         Inicio.Show()
                         Me.Hide()
                     End If

@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub Inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = "Bienvenido " + Producto.Nombre
+        Label1.Text = "Bienvenido " + Prod.Nombre
     End Sub
 
     Private Sub CerrarSesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click

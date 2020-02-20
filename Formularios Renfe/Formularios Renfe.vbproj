@@ -100,6 +100,7 @@
     <Compile Include="Busquedas Avanzadas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Gas.vb" />
     <Compile Include="Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
@@ -117,6 +118,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Prod.vb" />
     <Compile Include="StockP.Designer.vb">
       <DependentUpon>StockP.vb</DependentUpon>
     </Compile>
@@ -138,6 +140,12 @@
       <DependentUpon>Simulacion.vb</DependentUpon>
     </Compile>
     <Compile Include="Simulacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPV.Designer.vb">
+      <DependentUpon>TPV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TPV.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -168,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Simulacion.resx">
       <DependentUpon>Simulacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TPV.resx">
+      <DependentUpon>TPV.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
