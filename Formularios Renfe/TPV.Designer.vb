@@ -29,7 +29,6 @@ Partial Class TPV
         Me.Cantidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Nombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Precio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnPrintTicket = New System.Windows.Forms.Button()
         Me.btnPagar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbTotal = New System.Windows.Forms.Label()
@@ -37,13 +36,14 @@ Partial Class TPV
         Me.btnAdd1 = New System.Windows.Forms.Button()
         Me.btnMinus1 = New System.Windows.Forms.Button()
         Me.btnResetPedido = New System.Windows.Forms.Button()
-        Me.btnGas = New System.Windows.Forms.Button()
         Me.btnBebida = New System.Windows.Forms.Button()
         Me.btnMotor = New System.Windows.Forms.Button()
         Me.btnComida = New System.Windows.Forms.Button()
         Me.flp = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txbUsuario
@@ -68,7 +68,7 @@ Partial Class TPV
         Me.lstPedido.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Cantidad, Me.Nombre, Me.Precio})
         Me.lstPedido.FullRowSelect = True
         Me.lstPedido.HideSelection = False
-        Me.lstPedido.Location = New System.Drawing.Point(12, 73)
+        Me.lstPedido.Location = New System.Drawing.Point(12, 196)
         Me.lstPedido.Name = "lstPedido"
         Me.lstPedido.Size = New System.Drawing.Size(503, 472)
         Me.lstPedido.TabIndex = 3
@@ -90,18 +90,9 @@ Partial Class TPV
         Me.Precio.Text = "Precio"
         Me.Precio.Width = 103
         '
-        'btnPrintTicket
-        '
-        Me.btnPrintTicket.Location = New System.Drawing.Point(12, 674)
-        Me.btnPrintTicket.Name = "btnPrintTicket"
-        Me.btnPrintTicket.Size = New System.Drawing.Size(171, 60)
-        Me.btnPrintTicket.TabIndex = 4
-        Me.btnPrintTicket.Text = "Imprimir tiquet"
-        Me.btnPrintTicket.UseVisualStyleBackColor = True
-        '
         'btnPagar
         '
-        Me.btnPagar.Location = New System.Drawing.Point(189, 674)
+        Me.btnPagar.Location = New System.Drawing.Point(407, 674)
         Me.btnPagar.Name = "btnPagar"
         Me.btnPagar.Size = New System.Drawing.Size(171, 60)
         Me.btnPagar.TabIndex = 5
@@ -112,7 +103,7 @@ Partial Class TPV
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(51, 564)
+        Me.Label1.Location = New System.Drawing.Point(51, 682)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(132, 52)
         Me.Label1.TabIndex = 6
@@ -122,7 +113,7 @@ Partial Class TPV
         '
         Me.lbTotal.AutoSize = True
         Me.lbTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbTotal.Location = New System.Drawing.Point(197, 564)
+        Me.lbTotal.Location = New System.Drawing.Point(176, 682)
         Me.lbTotal.Name = "lbTotal"
         Me.lbTotal.Size = New System.Drawing.Size(47, 52)
         Me.lbTotal.TabIndex = 7
@@ -130,7 +121,7 @@ Partial Class TPV
         '
         'btnBorrarLinea
         '
-        Me.btnBorrarLinea.Location = New System.Drawing.Point(521, 275)
+        Me.btnBorrarLinea.Location = New System.Drawing.Point(521, 398)
         Me.btnBorrarLinea.Name = "btnBorrarLinea"
         Me.btnBorrarLinea.Size = New System.Drawing.Size(95, 95)
         Me.btnBorrarLinea.TabIndex = 8
@@ -139,7 +130,7 @@ Partial Class TPV
         '
         'btnAdd1
         '
-        Me.btnAdd1.Location = New System.Drawing.Point(521, 73)
+        Me.btnAdd1.Location = New System.Drawing.Point(521, 196)
         Me.btnAdd1.Name = "btnAdd1"
         Me.btnAdd1.Size = New System.Drawing.Size(95, 95)
         Me.btnAdd1.TabIndex = 9
@@ -148,7 +139,7 @@ Partial Class TPV
         '
         'btnMinus1
         '
-        Me.btnMinus1.Location = New System.Drawing.Point(521, 174)
+        Me.btnMinus1.Location = New System.Drawing.Point(521, 297)
         Me.btnMinus1.Name = "btnMinus1"
         Me.btnMinus1.Size = New System.Drawing.Size(95, 95)
         Me.btnMinus1.TabIndex = 10
@@ -157,25 +148,16 @@ Partial Class TPV
         '
         'btnResetPedido
         '
-        Me.btnResetPedido.Location = New System.Drawing.Point(521, 376)
+        Me.btnResetPedido.Location = New System.Drawing.Point(521, 499)
         Me.btnResetPedido.Name = "btnResetPedido"
         Me.btnResetPedido.Size = New System.Drawing.Size(95, 95)
         Me.btnResetPedido.TabIndex = 11
         Me.btnResetPedido.Text = "Borrar todo"
         Me.btnResetPedido.UseVisualStyleBackColor = True
         '
-        'btnGas
-        '
-        Me.btnGas.Location = New System.Drawing.Point(692, 12)
-        Me.btnGas.Name = "btnGas"
-        Me.btnGas.Size = New System.Drawing.Size(146, 72)
-        Me.btnGas.TabIndex = 15
-        Me.btnGas.Text = "Combustible"
-        Me.btnGas.UseVisualStyleBackColor = True
-        '
         'btnBebida
         '
-        Me.btnBebida.Location = New System.Drawing.Point(996, 12)
+        Me.btnBebida.Location = New System.Drawing.Point(844, 12)
         Me.btnBebida.Name = "btnBebida"
         Me.btnBebida.Size = New System.Drawing.Size(146, 72)
         Me.btnBebida.TabIndex = 16
@@ -184,7 +166,7 @@ Partial Class TPV
         '
         'btnMotor
         '
-        Me.btnMotor.Location = New System.Drawing.Point(1148, 12)
+        Me.btnMotor.Location = New System.Drawing.Point(996, 12)
         Me.btnMotor.Name = "btnMotor"
         Me.btnMotor.Size = New System.Drawing.Size(146, 72)
         Me.btnMotor.TabIndex = 17
@@ -193,7 +175,7 @@ Partial Class TPV
         '
         'btnComida
         '
-        Me.btnComida.Location = New System.Drawing.Point(844, 12)
+        Me.btnComida.Location = New System.Drawing.Point(692, 12)
         Me.btnComida.Name = "btnComida"
         Me.btnComida.Size = New System.Drawing.Size(146, 72)
         Me.btnComida.TabIndex = 18
@@ -222,17 +204,27 @@ Partial Class TPV
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 500
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 33.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(337, 682)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 52)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "€"
+        '
         'TPV
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 26.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1306, 746)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.flp)
         Me.Controls.Add(Me.btnComida)
         Me.Controls.Add(Me.btnMotor)
         Me.Controls.Add(Me.btnBebida)
-        Me.Controls.Add(Me.btnGas)
         Me.Controls.Add(Me.btnResetPedido)
         Me.Controls.Add(Me.btnMinus1)
         Me.Controls.Add(Me.btnAdd1)
@@ -240,7 +232,6 @@ Partial Class TPV
         Me.Controls.Add(Me.lbTotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnPagar)
-        Me.Controls.Add(Me.btnPrintTicket)
         Me.Controls.Add(Me.lstPedido)
         Me.Controls.Add(Me.lbFechaHora)
         Me.Controls.Add(Me.txbUsuario)
@@ -259,7 +250,6 @@ Partial Class TPV
     Friend WithEvents Cantidad As ColumnHeader
     Friend WithEvents Nombre As ColumnHeader
     Friend WithEvents Precio As ColumnHeader
-    Friend WithEvents btnPrintTicket As Button
     Friend WithEvents btnPagar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents lbTotal As Label
@@ -267,11 +257,12 @@ Partial Class TPV
     Friend WithEvents btnAdd1 As Button
     Friend WithEvents btnMinus1 As Button
     Friend WithEvents btnResetPedido As Button
-    Friend WithEvents btnGas As Button
     Friend WithEvents btnBebida As Button
     Friend WithEvents btnMotor As Button
     Friend WithEvents btnComida As Button
     Friend WithEvents flp As FlowLayoutPanel
     Friend WithEvents btnVolver As Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents Label2 As Label
 End Class
